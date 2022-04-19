@@ -4,17 +4,23 @@ margin:0}
 .logo{max-width: 100px;
 margin: 5px 0px 0px 10px;
 padding-bottom: 5px;}
-header{background-color: rgb(36, 95, 150);}
+header{background-color: rgb(36, 95, 150);
+grid-area: header;}
 
 h1{display: flex;
 padding-top: 1vw;
 justify-content: center;
 background-color: #69bcec;}
 
-.imgs{width: 270px;
-height: 270px;}
+.medio{display: flex;
+  justify-content: center;
+margin-top: 1vw;
+margin-bottom: 1vw;}
+.imgs{width: 220px;
+height: 220px;
+border: 1px solid black;}
 body{background-color: #c5eec5;}
-footer {margin-top:40vw;
+footer {margin-top:10vw;
     background-color: #353535;
     color: white; }
     footer .imagen {
@@ -25,3 +31,11 @@ footer {margin-top:40vw;
       display: flex;
       flex-direction: row-reverse;
       margin-right: 1vw; }
+li{list-style: none;
+font-size: 18px;}
+#resp{display: flex;
+flex-direction: row-reverse;
+margin-right: 20vw;
+font-weight: bold;
+}
+

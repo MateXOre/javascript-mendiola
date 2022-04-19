@@ -1,7 +1,7 @@
 let objeto;
 let cuotas;
 let coste=0;
-let box;
+
 
 class productos{
     constructor(producto, precio, stock){
@@ -86,8 +86,8 @@ case "12":dividir(coste,12);
 alert("Tiene que pagar $" + coste + " por 12 meses")
 break;
 }
-
-box=document.getElementById("resp")
-(() => {box.value=coste}
-)
 }
+
+let box=document.querySelector("#resp")
+box.textContent="Precio final: $" + coste;
+
