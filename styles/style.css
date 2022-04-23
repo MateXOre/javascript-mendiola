@@ -14,11 +14,22 @@ background-color: #69bcec;}
 
 .medio{display: flex;
   justify-content: center;
-margin-top: 1vw;
-margin-bottom: 1vw;}
+margin: 0px auto;
+height: auto;
+overflow: auto;
+}
+.medio li{
+  text-align: center;
+  list-style: none;
+  float: left;
+  height: auto;
+  overflow: auto;
+  margin: 20px;
+}
 .imgs{width: 220px;
 height: 220px;
-border: 1px solid black;}
+border: 2px solid black;
+padding: 1px;}
 body{background-color: #c5eec5;}
 footer {margin-top:10vw;
     background-color: #353535;

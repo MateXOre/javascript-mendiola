@@ -45,24 +45,24 @@ break;}
 
 
 
-if (compra.lenght > 2, compra.find((el)=> el==="TV") ) 
- {
-    alert("Felicidades por comprar mas de 2 productos usted recibio un 20% de descuento en: "  + compra.join(", ") + " y el coste final es de $" + coste*0.8)
+if (compra.lenght > 2, compra.find((el)=> el=="TV") ) 
+ {coste=coste*0.8
+    alert("Felicidades por comprar mas de 2 productos usted recibio un 20% de descuento en: "  + compra.join(", ") + " y el coste final es de $" + coste)
     cuotas=prompt("¿En cuantas cuotas le gustaria pagar?: 1, 3, 6 o 12")
     function dividir(valor1, valor2){
         coste=valor1/valor2
     }
     switch (cuotas){
-    case "1":alert("Tiene que pagar $" + coste*0.8 + " ahora")
+    case "1":alert("Tiene que pagar $" + coste + " ahora")
     break;
     case "3":dividir(coste,3);
-    alert("Tiene que pagar $" + coste*0.8 + " por 3 meses")
+    alert("Tiene que pagar $" + coste + " por 3 meses")
     break;
     case"6":dividir(coste,6);
-    alert("Tiene que pagar $" + coste*0.8 + " por 6 meses")
+    alert("Tiene que pagar $" + coste + " por 6 meses")
     break;
     case "12":dividir(coste,12);
-    alert("Tiene que pagar $" + coste*0.8 + " por 12 meses")
+    alert("Tiene que pagar $" + coste+ " por 12 meses")
     break;
     }
 
@@ -87,7 +87,13 @@ alert("Tiene que pagar $" + coste + " por 12 meses")
 break;
 }
 }
-
 let box=document.querySelector("#resp")
-box.textContent="Precio final: $" + coste;
+let boton=document.querySelector("#btn1")
+boton.onclick =()=> {sumar(coste,producto1.precio);
+    box.textContent="Precio final: $" + coste;}
+    
+
+
+
+
 
