@@ -45,7 +45,7 @@ break;}
 
 
 
-if (compra.lenght > 2, compra.find((el)=> el=="TV") ) 
+if ((compra.lenght > 2) && (compra.find((el)=> el=="TV") )) 
  {coste=coste*0.8
     alert("Felicidades por comprar mas de 2 productos usted recibio un 20% de descuento en: "  + compra.join(", ") + " y el coste final es de $" + coste)
     cuotas=prompt("¿En cuantas cuotas le gustaria pagar?: 1, 3, 6 o 12")
@@ -88,27 +88,28 @@ break;
 }
 }
     let box=document.querySelector("#resp")
-    let boton1=document.querySelector("#btn1")
+    box.textContent="Precio final: $" + coste;
+    let boton1=document.querySelector(".btn1")
     boton1.onclick =()=> {sumar(coste,producto1.precio);
         box.textContent="Precio final: $" + coste;}
     
-    let boton2=document.querySelector("#btn2")
+    let boton2=document.querySelector(".btn2")
     boton2.onclick =()=> {sumar(coste,producto3.precio);
         box.textContent="Precio final: $" + coste;}
     
-    let boton3=document.querySelector("#btn3")
+    let boton3=document.querySelector(".btn3")
     boton3.onclick =()=> {sumar(coste,producto2.precio);
         box.textContent="Precio final: $" + coste;}
     
-    let boton4=document.querySelector("#btn4")
+    let boton4=document.querySelector(".btn4")
     boton4.onclick =()=> {sumar(coste,producto4.precio);
         box.textContent="Precio final: $" + coste;}
     
-    let boton5=document.querySelector("#btn5")
+    let boton5=document.querySelector(".btn5")
     boton5.onclick =()=> {sumar(coste,producto6.precio);
         box.textContent="Precio final: $" + coste;}
     
-    let boton6=document.querySelector("#btn6")
+    let boton6=document.querySelector(".btn6")
     boton6.onclick =()=> {sumar(coste,producto5.precio);
         box.textContent="Precio final: $" + coste;}
     
