@@ -37,7 +37,8 @@ overflow: auto;
 .imgs{width: 350px;
 height: 350px;
 border: 2px solid black;
-padding: 1px;}
+padding: 1px;
+margin:10px;}
 body{background-color: #949494;}
 footer {margin-top:10vw;
     background-color: #353535;
