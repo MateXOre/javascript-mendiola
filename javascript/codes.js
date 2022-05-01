@@ -39,6 +39,7 @@
             
     })
 sessionStorage.clear()
+    box.textContent="Precio final: $0";
 }
 })}
 
