@@ -10,9 +10,39 @@
         }
     }
 
+
+
     let boton=document.querySelector(".btn7")
-    boton.onclick =()=> { var compras=document.querySelector(".compras");
-    compras.innerHTML =sessionStorage.getItem("objects");}
+    boton.onclick =()=> {
+    let objcomprados=sessionStorage.getItem("objects");
+
+    Swal.fire({
+        title: 'Compras',
+        text: objcomprados,
+})}
+
+
+    let button1=document.querySelector(".btn8")
+    button1.onclick =()=> {
+        Swal.fire({
+            title: '¿Seguro quiere vaciar el carrito?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Quiero vaciar el carrito',
+            cancelButtonText: 'No quiero'
+    
+}).then((result) => {
+    if(result.isConfirmed) {
+        Swal.fire({
+            title: 'Carrito vaciado',
+            icon: 'success',
+            
+    })
+sessionStorage.clear()
+}
+})}
+
+
 
     const producto1 = new productos ("celular",20000);
     const producto2 = new productos ("licuadora",5000);
@@ -31,14 +61,11 @@ function objtssave (objects){
     let objarray=JSON.stringify(arrayobjects);
     sessionStorage.setItem("objects", objarray)
     }
-let objects=JSON.parse(sessionStorage.getItem("objects"));
-for (var objeto of objects){
+let objects=JSON.parse(sessionStorage.getItem("objects")) || ("");
+for (let objeto of objects){
     costar=costar+objeto.precio
 }
     let box=document.querySelector("#resp")
     box.textContent="Precio final: $" + costar;
     
     
-    
-
-

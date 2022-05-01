@@ -87,6 +87,7 @@
 </div>
 <div class="right">
 <a class="boton btn7" href="#">Ver compras</a>
+<a class="boton btn8" href="#">Vaciar compras</a>
 </div>
 <label id="resp" ></label>
 <div class="compras"></div>
@@ -95,7 +96,8 @@
         let boton1=document.querySelector(".btn1")
     boton1.onclick =()=> {sumar(coste,producto1.precio);
         objtssave (producto1);
-        box.textContent="Precio final: $" + costar;}
+        box.textContent="Precio final: $" + costar;
+}
         
     let boton2=document.querySelector(".btn2")
     boton2.onclick =()=> {sumar(coste,producto3.precio);
@@ -124,11 +126,13 @@
     
 </script>
 
+
 <footer> Copyright &copy;2021 <div class="imagenes"> <a href="https://www.facebook.com"><img class="imagen" src="assets/fb2.png" alt="Facebook"/> </a>
     <a href="https://www.instagram.com"> <img class="imagen" src="assets/Instagram.png" alt="Instagram"/> </a>
  <a href="https://www.whatsapp.com"><img class="imagen" src="assets/whatsapp.png" alt="whatsapp"/></a> </div>  </footer>
  
-<script src="javascript/codes.js">
-</script>
+<script src="javascript/codes.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
