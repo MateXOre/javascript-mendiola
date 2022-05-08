@@ -12,21 +12,6 @@
 
 let list= document.querySelector(".agregar")
 
-fetch('productos/productos.json')
-.then( (res) => res.json())
-.then( (data) => {
-
-    data.forEach((producto) => {
-        const li = document.createElement('li')
-        li.innerHTML = `
-            <h4>${producto.producto}</h4>
-            <p>${producto.precio}</p>
-            <hr/>
-        `
-
-        list.append(li)
-    })
-})
 
 
 
@@ -74,7 +59,7 @@ sessionStorage.clear()
     const producto6 = new productos ("webcam",3000);
     const compra = []
     
-    function sumar(valor1, valor2) {
+  async  function sumar(valor1, valor2) {
         coste= valor1 + valor2}
 
 function objtssave (objects){

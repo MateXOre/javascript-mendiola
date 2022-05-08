@@ -22,66 +22,7 @@
 <div class="medio">
 
         <ul class="agregar">
-            <li>
-                <h3>Producto: Celular</h3> <br/>
-                <a href="pages/celular.html">
-                    <img src="assets/celular.png" class="imgs" alt="Celular"/> </a> <br />
-                    <ul>
-                        <li>Precio: $20000</li>
-                    </ul>
-                    <br />
-                    <a class="boton btn1" href="#">Añadir al pedido</a>
-            </li>
-            <li>
-                <h3>Producto: Televisor</h3> <br/>
-                <a href="pages/tv.html">
-                    <img src="assets/TV.jpg" class="imgs" alt="TV"/> </a> <br />
-                    <ul>
-                        <li>Precio: $40000</li>
-                    </ul>
-                    <br />
-                    <a class="boton btn2" href="#">Añadir al pedido</a>
-            </li>
-            <li>
-                <h3>Producto: Licuadora</h3> <br/>
-                <a href="pages/licuadora.html">
-                    <img src="assets/licuadora.jpg" class="imgs" alt="Licuadora"/> </a> <br />
-                    <ul>
-                        <li>Precio: $5000</li>
-                    </ul>
-                    <br />
-                    <a class="boton btn3" href="#">Añadir al pedido</a>
-            </li>
-            <li>
-                <h3>Producto: Smartwatch Mi band</h3> <br/>
-                <a href="pages/smwatch.html">
-                    <img src="assets/miBand.jpg" class="imgs" alt="Reloj"/> </a> <br />
-                    <ul>
-                        <li>Precio: $4000</li>
-                    </ul>
-                    <br />
-                    <a class="boton btn4" href="#">Añadir al pedido</a>
-            </li>
-            <li>
-                <h3>Producto: Webcam</h3> <br/>
-                <a href="pages/webcam.html">
-                    <img src="assets/webcam.jpg" class="imgs" alt="Webcam"/> </a> <br />
-                    <ul>
-                        <li>Precio: $3000</li>
-                    </ul>
-                    <br />
-                    <a class="boton btn5" href="#">Añadir al pedido</a>
-            </li>
-            <li>
-                <h3>Producto: Auriculares</h3> <br/>
-                <a href="pages/auris.html">
-                    <img src="assets/auriculares.jpg" class="imgs" alt="Auriculares"/> </a> <br />
-                    <ul>
-                        <li>Precio: $6000</li>
-                    </ul>
-                    <br />
-                    <a class="boton btn6" href="#">Añadir al pedido</a>
-            </li>
+
         </ul>
 
 </div>
@@ -93,6 +34,23 @@
 <div class="compras"></div>
 
 <script>
+    const pedircosas=async() =>{
+        const resp= await
+fetch('productos/productos.json')
+const data= await resp.json()
+    data.forEach((producto) => {
+        const li = document.createElement('li')
+        li.innerHTML = `
+        <h3>Producto: ${producto.producto}</h3>
+        <a href="pages/${producto.producto}.html">
+        <img src="assets/${producto.producto}.jpg" class="imgs" alt="${producto.producto}"/> </a> <br />
+            <p>Precio: $${producto.precio}</p>
+            <br />
+            <a class="boton btn1" href="#">Añadir al pedido</a>
+        `
+        list.append(li)
+})}
+pedircosas()
         let boton1=document.querySelector(".btn1")
     boton1.onclick =()=> {sumar(coste,producto1.precio);
         objtssave (producto1);
