@@ -1,0 +1,8 @@
+[
+    {"producto":"celular", "precio":"20000"},
+    {"producto":"licuadora", "precio":"5000"},
+    {"producto":"TV", "precio":"40000"},
+    {"producto":"smartwatch", "precio":"4000"},
+    {"producto":"auriculares", "precio":"6000"},
+    {"producto":"webcam", "precio":"3000"}
+]

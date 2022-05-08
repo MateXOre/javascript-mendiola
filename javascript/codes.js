@@ -10,6 +10,27 @@
         }
     }
 
+let list= document.querySelector(".agregar")
+
+fetch('productos/productos.json')
+.then( (res) => res.json())
+.then( (data) => {
+
+    data.forEach((producto) => {
+        const li = document.createElement('li')
+        li.innerHTML = `
+            <h4>${producto.producto}</h4>
+            <p>${producto.precio}</p>
+            <hr/>
+        `
+
+        list.append(li)
+    })
+})
+
+
+
+
 
 
     let boton=document.querySelector(".btn7")
