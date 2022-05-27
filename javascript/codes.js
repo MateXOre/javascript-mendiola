@@ -20,12 +20,13 @@ let list= document.querySelector(".agregar")
 
     let boton=document.querySelector(".btn7")
     boton.onclick =()=> {
-    let objcomprados=sessionStorage.getItem("objects");
+        let objcomprados=sessionStorage.getItem("objects");
 
-    Swal.fire({
-        title: 'Compras',
-        text: objcomprados,
-})}
+        Swal.fire({
+            title: 'Compras',
+            text: objcomprados
+    })}  
+
 
 
     let button1=document.querySelector(".btn8")
