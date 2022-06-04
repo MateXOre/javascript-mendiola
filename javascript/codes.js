@@ -4,9 +4,10 @@
     let costar=0;
 
     class productos{
-        constructor(producto, precio, stock){
+        constructor(producto, precio, id){
             this.producto= producto;
             this.precio= precio;
+            this.id=id;
         }
     }
 
@@ -52,12 +53,12 @@ sessionStorage.clear()
 
 
 
-    const producto1 = new productos ("celular",20000);
-    const producto2 = new productos ("licuadora",5000);
-    const producto3 = new productos ("TV",40000);
-    const producto4 = new productos ("smartwatch",4000);
-    const producto5 = new productos ("auriculares",6000);
-    const producto6 = new productos ("webcam",3000);
+    const producto1 = new productos ("celular",20000,1);
+    const producto2 = new productos ("licuadora",5000,2);
+    const producto3 = new productos ("TV",40000,3);
+    const producto4 = new productos ("smartwatch",4000,4);
+    const producto5 = new productos ("auriculares",6000,5);
+    const producto6 = new productos ("webcam",3000,6);
     const compra = []
     
   async  function sumar(valor1, valor2) {
